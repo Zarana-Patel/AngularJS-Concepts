@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.angularjs.org/1.5.0-rc.1/angular.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+           <script type="text/javascript" src="main.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    </head>
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      
+    <body ng-app="myApp">
+        <div class ="col-md-9 " ng-controller="myController">
+            <div class="container">
+                <h4>Simple Todo Application :[<a href="" ng-click="archive()">Archive</a>]</h4> 
+                <h5><span class="emphasis">You have <b>{{getTotalTasks()}}</b> to complete:</span></h5>
+                <div>
+                    <ol >
+                    <li ng-repeat="task in tasks">   
+                       <input type ="checkbox" ng-model="task.done" /> <span class="done-{{task.done}}">{{task.text}}</span> </li>
+                    </ol>
+                <div class ="row">
+                    <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                    <input type="text" class="form-control"  ng-model="newTask" placeholder="I need to do...">
+                                 <button class="btn btn-default" type="button" ng-click="addTask()">Add</button>
+                                </div><!-- /input-group -->          
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

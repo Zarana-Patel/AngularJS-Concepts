@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src= "https://code.angularjs.org/1.5.0-rc.1/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.0-rc.1/angular-messages.min.js"></script>
+<script src="https://code.angularjs.org/1.5.0-rc.1/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    
+    </head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Angular JS Watchers and Digest Loops</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Fixed Navbar</h3>
+  <div class="row">
+    <div ng-controller="myController">
+            <label>Enter your linkedin address:</label>
+        <input type="text" placeholder="Enter the text here.." ng-model="handle"/>
+        <p>http://www.linkedin.com/{{ handle }}</p>
+         <p>http://www.linkedin.com/{{ lowercasehandle() }}</p>
+      </div>
+
+    </div>
+    
+</div>
+
+
+    </body>
+</html>
